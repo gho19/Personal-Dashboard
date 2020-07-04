@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+</style>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Grant's Dashboard</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="font-awesome.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="g.png"/>
+    <script src="dashboard.js"></script>
+    <script src="to-do.js"></script>
+  </head>
+
+  <body>
+
+    <div class="grid-container">
+     <div class="menu-icon">
+      <i class="fas fa-bars header__menu"></i>
+    </div>
+
+    <header class="header"></header>
+
+    <aside class="sidenav">
+      <div class="sidenav__close-icon">
+        <i class="fas fa-times sidenav__brand-close"></i>
+      </div>
+      <ul class="sidenav__list">
+        <li style="padding-left: 15px; padding-bottom: 5px;"><b>PRODUCTIVITY</b></li>
+        <a class="sidenav__list-item" href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Gmail</a>
+        <a class="sidenav__list-item" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+        <a class="sidenav__list-item" href="https://enlight.nyc/cohort/" target="_blank">Enlight</a>
+        <br></br>
+        <li style="padding-left: 15px; padding-bottom: 5px;"><b>BRAIN DEAD</b></li>
+        <a class="sidenav__list-item" href="https://espn.com/" target="_blank">ESPN</a>
+        <a class="sidenav__list-item" href="https://www.netflix.com/" target="_blank">Netflix</a>
+        <a class="sidenav__list-item" href="https://www.hulu.com/" target="_blank">Hulu</a>
+        <a class="sidenav__list-item" href="https://www.instagram.com/" target="_blank">Instagram</a>
+        <a class="sidenav__list-item" href="https://www.youtube.com/" target="_blank">YouTube</a>
+
+      </ul>
+    </aside>
+
+    <main class="main">
+      <a class="weatherwidget-io" href="https://forecast7.com/en/39d74n104d99/denver/?unit=us" data-label_1="DENVER" data-label_2="WEATHER" data-theme="original" >DENVER WEATHER</a>
+      <script>
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+      </script>
+
+      <div class="main-cards">
+
+        <div class="card">
+          <script>
+            var welcome;
+            var date = new Date();
+            var d = date.toLocaleDateString();
+            var hour = date.getHours();
+            var minute = date.getMinutes();
+            var second = date.getSeconds();
+
+
+
+
+            if (hour < 12) {
+              welcome = "👋 Good morning";
+            } else if (hour < 17) {
+              welcome = "👋 Good afternoon";
+            } else {
+              welcome = "👋 Good evening";
+            }
+            document.write("<h4>" + "<font color='#333'>" + welcome + " Grant" + "</font>");
+          </script>
+        </div>
+
+        <div class="card">
+          <h5 style="text-align: center;color: #333; margin-top: -10px;">CALENDAR 📅</h5>
+          <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FDenver&amp;src=Z3JhbnR5aG9AZ21haWwuY29t&amp;src=YzdnM2EyMDd0OGNla2cxMWduajdnZXJwNXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=dmV0ZHRmZmthNnBwczFzYnQyYjQ0bTE1NzBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=bzUzcm1uOWdycmQ4bnQxNDNudWd2dWU2bWtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=bmdoZTYxczRtbHIxc25pNHNlcHBqZ3BzcTdrMjZhOWlAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=dW1pY2guZWR1X3NzZmZ2MnIzMTA1dW8xN2dnOTZsNThwZG5nQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=Z3JhbnRAd2FybWx5Y29tbWEuY29t&amp;src=Z3JhbnRob0B1bWljaC5lZHU&amp;color=%234285F4&amp;color=%23D50000&amp;color=%237CB342&amp;color=%234285F4&amp;color=%23D50000&amp;color=%234285F4&amp;color=%23130e7e&amp;color=%238E24AA&amp;color=%2333B679&amp;color=%23D81B60&amp;showPrint=0&amp;showDate=1&amp;showTitle=0&amp;showTabs=1&amp;showCalendars=1&amp;showTz=0" style="border-width:0" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+
+        <div id="headlines" class="card">
+          <h3 style="text-align: center; background-color:#333; color: #fff;">NEWS  📰</h3>
+            <script src="nytimes.js"></script>
+        </div>
+
+        <!-- TradingView Widget BEGIN -->
+        <div class="card">
+          <h5 style="text-align: center;color: #333; margin-top: -5px;">SPORTS  ⚽⚾🏀🏈</h5>
+          <div align="center">
+            <a class="twitter-timeline" data-width="600" data-dnt="true"  data-tweet-limit="10000" href="https://twitter.com/sportingnews?lang=en"></a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </div>
+        <!-- TradingView Widget END -->
+        <div class="card">
+          <h5 style="text-align: center;color: #333; margin-top: -5px;">STOCK MARKET 📈</h5>
+
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Market Data</span></a> by TradingView</div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+          {
+          "width": "100%",
+          "height": "100%",
+          "symbolsGroups": [
+            {
+              "name": "Indices",
+              "originalName": "Indices",
+              "symbols": [
+                {
+                  "name": "FOREXCOM:SPXUSD",
+                  "displayName": "S&P 500"
+                },
+                {
+                  "name": "FOREXCOM:NSXUSD",
+                  "displayName": "Nasdaq 100"
+                },
+                {
+                  "name": "FOREXCOM:DJI",
+                  "displayName": "Dow 30"
+                },
+                {
+                  "name": "INDEX:NKY",
+                  "displayName": "Nikkei 225"
+                },
+                {
+                  "name": "INDEX:DEU30",
+                  "displayName": "DAX Index"
+                },
+                {
+                  "name": "FOREXCOM:UKXGBP",
+                  "displayName": "FTSE 100"
+                }
+              ]
+            },
+            {
+              "name": "Commodities",
+              "originalName": "Commodities",
+              "symbols": [
+                {
+                  "name": "CME_MINI:ES1!",
+                  "displayName": "E-Mini S&P"
+                },
+                {
+                  "name": "CME:6E1!",
+                  "displayName": "Euro"
+                },
+                {
+                  "name": "COMEX:GC1!",
+                  "displayName": "Gold"
+                },
+                {
+                  "name": "NYMEX:CL1!",
+                  "displayName": "Crude Oil"
+                },
+                {
+                  "name": "NYMEX:NG1!",
+                  "displayName": "Natural Gas"
+                },
+                {
+                  "name": "CBOT:ZC1!",
+                  "displayName": "Corn"
+                }
+              ]
+            },
+            {
+              "name": "Bonds",
+              "originalName": "Bonds",
+              "symbols": [
+                {
+                  "name": "CME:GE1!",
+                  "displayName": "Eurodollar"
+                },
+                {
+                  "name": "CBOT:ZB1!",
+                  "displayName": "T-Bond"
+                },
+                {
+                  "name": "CBOT:UB1!",
+                  "displayName": "Ultra T-Bond"
+                },
+                {
+                  "name": "EUREX:FGBL1!",
+                  "displayName": "Euro Bund"
+                },
+                {
+                  "name": "EUREX:FBTP1!",
+                  "displayName": "Euro BTP"
+                },
+                {
+                  "name": "EUREX:FGBM1!",
+                  "displayName": "Euro BOBL"
+                }
+              ]
+            },
+            {
+              "name": "Forex",
+              "originalName": "Forex",
+              "symbols": [
+                {
+                  "name": "FX:EURUSD"
+                },
+                {
+                  "name": "FX:GBPUSD"
+                },
+                {
+                  "name": "FX:USDJPY"
+                },
+                {
+                  "name": "FX:USDCHF"
+                },
+                {
+                  "name": "FX:AUDUSD"
+                },
+                {
+                  "name": "FX:USDCAD"
+                }
+              ]
+            }
+          ],
+          "colorTheme": "light",
+          "isTransparent": false,
+          "locale": "en"
+          }
+          </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </div>
+
+
+
+      </div>
+
+
+      <div class="main-overview">
+
+        <div class="overviewcard">
+          <div class="overviewcard__icon"></div>
+          <div class="overviewcard__info"></div>
+        </div>
+
+        <div class="overviewcard">
+          <div class="overviewcard__icon"></div>
+          <div class="overviewcard__info"></div>
+        </div>
+
+        <div class="overviewcard">
+          <div class="overviewcard__icon"></div>
+          <div class="overviewcard__info"></div>
+        </div>
+
+        <div class="overviewcard">
+          <div class="overviewcard__icon"></div>
+          <div class="overviewcard__info"></div>
+        </div>
+      </div>
+
+
+    </main>
+
+
+    <footer class="footer"></footer>
+
+  </div>
+
+
+
+
+  </body>
+
+</html>
